@@ -241,6 +241,11 @@ export default {
         }
       ]
     },
+      {
+          name: 'prueba',
+          url: '/prueba',
+          icon: 'icon-star'
+      },
     {
       name: 'Download CoreUI',
       url: 'http://coreui.io/vue/',
