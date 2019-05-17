@@ -4,8 +4,8 @@
     <div class="app-body pb-5">
       <Sidebar :navItems="nav"/>
       <main class="main">
-        <breadcrumb :list="list"/>
-        <div class="container-fluid">
+        <!--<breadcrumb :list="list"/>-->
+        <div class="container-fluid pt-3">
           <nuxt />
         </div>
       </main>
@@ -21,7 +21,8 @@ import { Header as AppHeader,
     Sidebar,
     // Aside as AppAside,
     Footer as AppFooter,
-    Breadcrumb } from '~/components/'
+    // Breadcrumb
+} from '~/components/'
 
 export default {
   name: 'full',
@@ -30,7 +31,7 @@ export default {
     Sidebar,
     // AppAside,
     AppFooter,
-    Breadcrumb
+    // Breadcrumb
   },
   data () {
     return {
