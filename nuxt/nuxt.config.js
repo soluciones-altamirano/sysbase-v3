@@ -15,21 +15,22 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt CoreUI',
+    title: 'SysBase v3 - LIN',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Unofficial Nuxt + CoreUI project, free to use boilerplate for every need.' }
+      { hid: 'description', name: 'description', content: 'SysBase Soluciones Altamirano v3 - Laravel + Infyom + NUXT' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' +
+              '' }
     ]
   },
 
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#42A5CC' },
+  loading: { color: '#3D81F0' },
 
   /**
    * Import CSS
