@@ -5,7 +5,7 @@
       <Sidebar :navItems="nav"/>
       <main class="main">
         <!--<breadcrumb :list="list"/>-->
-        <div class="container-fluid pt-4">
+        <div class="container-fluid pt-4 pb-5">
           <nuxt />
         </div>
       </main>
