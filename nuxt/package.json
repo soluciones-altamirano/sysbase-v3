@@ -1,0 +1,36 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "SysBase v3 NUXT Laravel",
+  "author": "Gerson Altamirano <gersonaltamirano@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.7.1",
+    "express": "^4.17.0",
+    "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/style-resources": "^0.1.2",
+    "bootstrap-vue": "^2.0.0-rc.1",
+    "chart.js": "^2.8.0",
+    "flag-icon-css": "^3.3.0",
+    "font-awesome": "^4.7.0",
+    "simple-line-icons": "^2.4.1",
+    "vue-chartjs": "^3.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "nodemon": "^1.19.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.2.2"
+  }
+}
