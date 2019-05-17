@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
     "cross-env": "^5.2.0",
     "nuxt": "^2.7.1",
     "express": "^4.17.0",
@@ -25,14 +26,15 @@
     "tar": ">=4.4.8"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "nodemon": "^1.19.0",
+    "@fortawesome/fontawesome-free": "^5.8.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
+    "sass-loader": "^7.1.0",
     "tar": ">=4.4.8"
   }
 }
