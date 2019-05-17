@@ -1,10 +1,10 @@
 <template>
   <div class="app flex-row align-items-center">
-    <div class="container">
+    <div class="container p-0">
       <b-row class="justify-content-center">
         <b-col md="6" sm="8">
           <b-card no-body class="mx-4">
-            <b-card-body class="p-4">
+            <b-card-body class="p-3">
               <h1>Register</h1>
               <p class="text-muted">Create your account</p>
               <b-input-group class="mb-3">
@@ -40,7 +40,7 @@
             <b-card-footer class="p-4">
               <b-row>
                 <b-col cols="6">
-                  <b-button block class="btn btn-facebook"><span>facebook</span></b-button>
+                  <b-button block class="btn btn-facebook pr-0"><span>facebook</span></b-button>
                 </b-col>
                 <b-col cols="6">
                   <b-button block class="btn btn-twitter" type="button"><span>twitter</span></b-button>
