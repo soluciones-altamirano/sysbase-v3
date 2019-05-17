@@ -17,6 +17,9 @@ app-root {
 
 .app-header {
   flex: 0 0 $navbar-height;
+  position: fixed !important;
+  z-index: $zindex-sticky;
+  width: 100%;
 }
 
 .app-footer {

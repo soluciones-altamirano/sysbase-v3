@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <AppHeader/>
-    <div class="app-body pb-5">
+    <AppHeader />
+    <div class="app-body mt-1 pt-5">
       <Sidebar :navItems="nav"/>
       <main class="main">
         <!--<breadcrumb :list="list"/>-->
-        <div class="container-fluid pt-3">
+        <div class="container-fluid pt-4">
           <nuxt />
         </div>
       </main>
