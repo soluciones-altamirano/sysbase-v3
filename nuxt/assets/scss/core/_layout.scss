@@ -35,6 +35,7 @@ app-root {
   .main {
     flex: 1;
     min-width: 0;
+    margin-left: $sidebar-width ;
   }
 
   .sidebar {
@@ -42,6 +43,10 @@ app-root {
     flex: 0 0 $sidebar-width;
     // put the nav on the left
     order: -1;
+    position: fixed;
+    z-index: $zindex-sticky - 1;
+    height: calc(100vh - #{$navbar-height});
+    padding-bottom: 6vh;
   }
 
   .aside-menu {
@@ -70,6 +75,9 @@ app-root {
 .sidebar-hidden {
   .sidebar {
     margin-left: - $sidebar-width;
+  }
+  .main {
+    margin-left: 0px ;
   }
 }
 
@@ -140,6 +148,9 @@ app-root {
   .sidebar-minimized {
     .sidebar {
       flex: 0 0 $sidebar-minimized-width;
+    }
+    .main{
+      margin-left: $sidebar-minimized-width !important;
     }
 
     &.sidebar-hidden {
