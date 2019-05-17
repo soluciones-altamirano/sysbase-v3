@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <AppHeader/>
-    <div class="app-body">
+    <div class="app-body pb-5">
       <Sidebar :navItems="nav"/>
       <main class="main">
         <breadcrumb :list="list"/>
@@ -11,7 +11,7 @@
       </main>
       <!--<AppAside/>-->
     </div>
-    <AppFooter/>
+    <AppFooter class="fixed-bottom p-3"/>
   </div>
 </template>
 
