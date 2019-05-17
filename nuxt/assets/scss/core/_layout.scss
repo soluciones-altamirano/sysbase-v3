@@ -124,7 +124,7 @@ app-root {
       }
 
       &.sidebar-hidden {
-        .main, .app-footer {
+        .main {
           margin-left: 0;
         }
       }
@@ -352,6 +352,7 @@ app-root {
     .nav {
       width: $mobile-sidebar-width;
       min-height: calc(100vh - #{$navbar-height});
+      padding-bottom: 4vh;
     }
 
     .sidebar-minimizer {
