@@ -3,7 +3,10 @@
 namespace App\Models;
 
 use Eloquent as Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * Class User
@@ -17,9 +20,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string password
  * @property string remember_token
  */
-class User extends Model
+class User extends Authenticatable implements JWTSubject
 {
     use SoftDeletes;
+    use Notifiable;
 
     public $table = 'users';
     
@@ -66,5 +70,26 @@ class User extends Model
         'password' => 'required'
     ];
 
-    
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        // TODO: Implement getJWTIdentifier() method.}
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        // TODO: Implement getJWTCustomClaims() method.
+        return [];
+    }
 }
