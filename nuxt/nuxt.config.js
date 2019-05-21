@@ -32,6 +32,12 @@ module.exports = {
   */
   loading: { color: '#3D81F0' },
 
+    router:{
+      middleware: [
+          'clearValidationErrors'
+      ]
+    },
+
   /**
    * Import CSS
    */
@@ -52,6 +58,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+      './plugins/mixins/validation',
+      './plugins/axios'
     
   ],
     auth: {
