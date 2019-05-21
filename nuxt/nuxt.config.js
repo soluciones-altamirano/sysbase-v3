@@ -55,29 +55,30 @@ module.exports = {
     
   ],
     auth: {
-      strategies: {
-          local: {
-              endpoint: {
-                  url: 'auth/login',
-                  method: 'post',
-                  propertyName: 'token'
-              },
-              user: {
-                  url: 'me',
-                  method: 'get',
-                  propertyName: 'data'
-              },
-              logout:{
-                  url: 'logout',
-                  method: 'get'
-              }
-          }
-      },
+        strategies: {
+            local: {
+                endpoints: {
+                    login:{
+                        url: 'auth/login',
+                        method: 'post',
+                        propertyName: 'token'
+                    },
+                    user: {
+                        url: 'me',
+                        method: 'get',
+                        propertyName: 'data'
+                    },
+                    logout:{
+                        url: 'logout',
+                        method: 'get'
+                    }
+                },
+            }
+        },
         redirect: {
-          login: '/auth/login',
+            login: '/auth/login',
             home: '/'
         }
-
     },
 
   /*
