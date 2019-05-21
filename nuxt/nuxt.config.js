@@ -48,16 +48,37 @@ module.exports = {
     { src: '~/assets/scss/style.scss', lang: 'scss' }
   ],
 
-    auth: {
-
-    },
-
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     
   ],
+    auth: {
+      strategies: {
+          local: {
+              endpoint: {
+                  url: 'auth/login',
+                  method: 'post',
+                  propertyName: 'token'
+              },
+              user: {
+                  url: 'me',
+                  method: 'get',
+                  propertyName: 'data'
+              },
+              logout:{
+                  url: 'logout',
+                  method: 'get'
+              }
+          }
+      },
+        redirect: {
+          login: '/auth/login',
+            home: '/'
+        }
+
+    },
 
   /*
   ** Nuxt.js modules
@@ -75,6 +96,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+      baseURL: 'https://backend.local/api'
   },
 
   /*
@@ -91,6 +113,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
