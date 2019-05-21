@@ -48,6 +48,10 @@ module.exports = {
     { src: '~/assets/scss/style.scss', lang: 'scss' }
   ],
 
+    auth: {
+
+    },
+
   /*
   ** Plugins to load before mounting the App
   */
@@ -62,7 +66,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://github.com/bootstrap-vue/bootstrap-vue
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+
+      '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
