@@ -15,7 +15,12 @@
 
 <script>
     export default {
-        name: "prueba"
+        name: "prueba",
+        // fetch ({ store, redirect }) {
+        //     if (!this.$store.state.auth.user) {
+        //         return redirect('/theme/typography')
+        //     }
+        // }
     }
 </script>
 
