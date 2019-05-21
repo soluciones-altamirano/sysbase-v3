@@ -70,6 +70,7 @@
 export default {
   name: 'Register',
   layout: 'clean',
+    auth: false,
     data(){
       return {
           form: {

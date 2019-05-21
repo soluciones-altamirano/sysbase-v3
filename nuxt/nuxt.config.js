@@ -34,7 +34,8 @@ module.exports = {
 
     router:{
       middleware: [
-          'clearValidationErrors'
+          'clearValidationErrors',
+          'auth'
       ]
     },
 
@@ -123,6 +124,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extractCSS: true,
+
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({

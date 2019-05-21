@@ -548,6 +548,7 @@ import { Callout } from '~/components/'
 
 export default {
   name: 'dashboard',
+    auth: false,
   components: {
     Callout,
     CardLine1ChartExample,

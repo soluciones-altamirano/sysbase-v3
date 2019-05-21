@@ -62,6 +62,7 @@
 export default {
   name: 'Login',
   layout: 'clean',
+    auth: false,
     data(){
         return {
             form: {
