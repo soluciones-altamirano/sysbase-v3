@@ -12,21 +12,30 @@
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-user"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="text" v-model="form.name" class="form-control" placeholder="Username">
+                <input type="text" v-model="form.name" class="form-control" :class="{ 'is-invalid': errors.name }" placeholder="Username">
+                  <div class="invalid-feedback" v-if="errors.name">
+                      {{errors.name[0]}}
+                  </div>
               </b-input-group>
 
               <b-input-group class="mb-3">
                 <b-input-group-prepend>
                   <b-input-group-text>@</b-input-group-text>
                 </b-input-group-prepend>
-                <input type="text" v-model="form.email" class="form-control" placeholder="Email">
+                <input type="text" v-model="form.email" class="form-control" :class="{ 'is-invalid': errors.email }" placeholder="Email">
+                  <div class="invalid-feedback" v-if="errors.email">
+                      {{errors.email[0]}}
+                  </div>
               </b-input-group>
 
               <b-input-group class="mb-3">
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-lock"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="password" v-model="form.password" class="form-control" placeholder="Password">
+                <input type="password" v-model="form.password" class="form-control" :class="{ 'is-invalid': errors.password }" placeholder="Password">
+                  <div class="invalid-feedback" v-if="errors.password">
+                      {{errors.password[0]}}
+                  </div>
               </b-input-group>
 
               <!--<b-input-group class="mb-4">-->
@@ -73,7 +82,11 @@ export default {
     methods: {
       async register(){
 
-          await this.$axios.post('/auth/register', this.form);
+          try {
+              await this.$axios.post('/auth/register', this.form);
+          } catch(e) {
+              return;
+          }
 
           this.$auth.login({data: this.form});
 
