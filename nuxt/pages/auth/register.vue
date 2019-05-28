@@ -12,11 +12,21 @@
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-user"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="text" v-model="form.name" class="form-control" :class="{ 'is-invalid': errors.name }" placeholder="Username">
+                <input type="text" v-model="form.name" class="form-control" :class="{ 'is-invalid': errors.name }" placeholder="Nombre Completo">
                   <div class="invalid-feedback" v-if="errors.name">
                       {{errors.name[0]}}
                   </div>
               </b-input-group>
+
+                  <b-input-group class="mb-3">
+                      <b-input-group-prepend>
+                          <b-input-group-text><i class="icon-user"></i></b-input-group-text>
+                      </b-input-group-prepend>
+                      <input type="text" v-model="form.username" class="form-control" :class="{ 'is-invalid': errors.name }" placeholder="Usuario">
+                      <div class="invalid-feedback" v-if="errors.username">
+                          {{errors.username[0]}}
+                      </div>
+                  </b-input-group>
 
               <b-input-group class="mb-3">
                 <b-input-group-prepend>
@@ -70,11 +80,13 @@
 export default {
   name: 'Register',
   layout: 'clean',
+    middleware: 'guest',
     auth: false,
     data(){
       return {
           form: {
               name:'',
+              username:'',
               email:'',
               password:'',
           }

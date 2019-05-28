@@ -62,6 +62,7 @@
 export default {
   name: 'Login',
   layout: 'clean',
+    middleware: 'guest',
     auth: false,
     data(){
         return {
