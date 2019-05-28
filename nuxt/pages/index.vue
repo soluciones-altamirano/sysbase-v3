@@ -1,5 +1,12 @@
 <template>
   <div class="animated fadeIn">
+      <b-row class="pb-3">
+          <b-col lg="9"></b-col>
+          <b-col lg="3"  sm="6" >
+              <h1 class="bg-success rounded text-center px-3 py-2" v-show="authenticated" >Logueado</h1>
+              <h1 class="bg-danger rounded text-center px-3 py-2" v-show="!authenticated">No Logueado</h1>
+          </b-col>
+      </b-row>
     <b-row>
       <b-col sm="6" lg="3">
         <b-card no-body class="bg-primary">
@@ -547,7 +554,7 @@ import CalloutChartExample from '~/components/dashboard/CalloutChartExample'
 import { Callout } from '~/components/'
 
 export default {
-  name: 'dashboard',
+  // name: 'dashboard',
     auth: false,
   components: {
     Callout,
