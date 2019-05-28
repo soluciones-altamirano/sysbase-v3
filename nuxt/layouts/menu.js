@@ -2,7 +2,7 @@ export default {
   items: [
     {
       name: 'Dashboard',
-      url: '/',
+      url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
         variant: 'primary',
@@ -221,12 +221,12 @@ export default {
       children: [
         {
           name: 'Login',
-          url: '/pages/login',
+          url: '/auth/login',
           icon: 'icon-star'
         },
         {
           name: 'Register',
-          url: '/pages/register',
+          url: '/auth/register',
           icon: 'icon-star'
         },
         {
