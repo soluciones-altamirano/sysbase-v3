@@ -60,6 +60,7 @@ module.exports = {
   */
   plugins: [
       './plugins/mixins/validation',
+      './plugins/mixins/user',
       './plugins/axios'
     
   ],
@@ -78,7 +79,7 @@ module.exports = {
                         propertyName: 'data'
                     },
                     logout:{
-                        url: 'logout',
+                        url: 'auth/logout',
                         method: 'get'
                     }
                 },
