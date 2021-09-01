@@ -23,7 +23,7 @@
     "font-awesome": "^4.7.0",
     "nuxt": "^2.7.1",
     "simple-line-icons": "^2.4.1",
-    "tar": ">=4.4.8",
+    "tar": ">=4.4.18",
     "vue-chartjs": "^3.4.2"
   },
   "devDependencies": {
@@ -36,6 +36,6 @@
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.0",
     "sass-loader": "^7.1.0",
-    "tar": ">=4.4.8"
+    "tar": ">=4.4.18"
   }
 }
